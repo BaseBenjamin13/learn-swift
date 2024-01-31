@@ -7,18 +7,15 @@
 
 import SwiftUI
 
-struct Question {
+struct Question: Identifiable {
+    let id = UUID()
     let title : String
     let answer: String
     let choices: [String]
 }
 
 struct QuestionView: View {
-    @State var question = Question(
-        title: "When was the Iphone first released?",
-        answer: "A",
-        choices: ["A", "B", "C","D"]
-    )
+    @State var question: Question
 
     
     var body: some View {
@@ -31,7 +28,7 @@ struct QuestionView: View {
             }
         }
         .padding(.horizontal, 20)
-        .frame(height: 550)
+        .frame(width: 340, height: 550, alignment: .leading)
         .background(Color(uiColor: .systemGray6))
         .cornerRadius(30)
         .shadow(
@@ -44,7 +41,11 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            QuestionView()
+            QuestionView(question: Question(
+                title: "When was the Iphone first released?",
+                answer: "A",
+                choices: ["A", "B", "C","D"]
+            ))
                 .previewDevice("iPhone 13 Pro")
         }
     }
