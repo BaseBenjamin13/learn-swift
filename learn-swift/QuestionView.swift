@@ -11,20 +11,30 @@ struct Question: Identifiable {
     let id = UUID()
     let title : String
     let answer: String
-    let choices: [String]
+    let options: [String]
 }
+
 
 struct QuestionView: View {
     @State var question: Question
-
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(question.title)
-
             
-            ForEach(question.choices, id:\.self) { choice in
-                Text(choice)
+            ForEach(question.options, id:\.self) { option in
+                HStack {
+                    
+                    Button {
+                        print(option, "answer:", question.answer)
+                    } label: {
+                        Circle()
+                            .stroke()
+                            .shadow(radius: 3)
+                            .frame(width: 24, height: 24)
+                    }
+                    Text(option)
+                }
+                .foregroundColor(Color(uiColor: .secondaryLabel))
             }
         }
         .padding(.horizontal, 20)
@@ -44,9 +54,10 @@ struct QuestionView_Previews: PreviewProvider {
             QuestionView(question: Question(
                 title: "When was the Iphone first released?",
                 answer: "A",
-                choices: ["A", "B", "C","D"]
+                options: ["A", "B", "C","D"]
             ))
-                .previewDevice("iPhone 13 Pro")
+            .previewDevice("iPhone 12")
+            .previewInterfaceOrientation(.portrait)
         }
     }
 }

@@ -12,22 +12,22 @@ class QuizManager: ObservableObject {
         Question(
             title: "When was the Iphone first released?",
             answer: "A",
-            choices: ["A", "B", "C","D"]
+            options: ["A", "B", "C","D"]
         ),
         Question(
             title: "When was America established?",
             answer: "1776",
-            choices: ["1766", "1784", "1776","1821"]
+            options: ["1766", "1784", "1776","1821"]
         ),
         Question(
             title: "Whats the best game of all time?",
             answer: "Elden Ring",
-            choices: ["Black Ops 2", "Elden Ring", "Fortnight","God of War"]
+            options: ["Black Ops 2", "Elden Ring", "Fortnight","God of War"]
         ),
         Question(
             title: "Who was the first president of the USA?",
             answer: "Gearge Washington",
-            choices: ["Jackson", "JFK", "Gearge Washington","Abe Lincon"]
+            options: ["Jackson", "JFK", "Gearge Washington","Abe Lincon"]
         )
     ]
 }
