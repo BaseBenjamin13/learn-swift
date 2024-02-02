@@ -12,6 +12,7 @@ struct Question: Identifiable {
     let title : String
     let answer: String
     let options: [String]
+    var selection: String?
 }
 
 
@@ -23,17 +24,34 @@ struct QuestionView: View {
             
             ForEach(question.options, id:\.self) { option in
                 HStack {
-                    
                     Button {
-                        print(option, "answer:", question.answer)
+                        question.selection = option
+                        if  question.selection == question.answer && question.selection == option {
+                            print("Correct!")
+                        }
                     } label: {
-                        Circle()
-                            .stroke()
-                            .shadow(radius: 3)
-                            .frame(width: 24, height: 24)
+                        if  question.selection == question.answer && question.selection == option {
+                            Circle()
+                                .shadow(radius: 3)
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(Color(uiColor: .green))
+                        } else if question.selection == option {
+                            Circle()
+                                .shadow(radius: 3)
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(Color(uiColor: .systemBlue))
+                        } else {
+                            Circle()
+                                .stroke()
+                                .shadow(radius: 3)
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(Color(uiColor: .systemBlue))
+                            
+                        }
                     }
                     Text(option)
                 }
+                // Display answers dot as green after user selects a choice
                 .foregroundColor(Color(uiColor: .secondaryLabel))
             }
         }
