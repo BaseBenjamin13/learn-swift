@@ -39,7 +39,7 @@ struct QuestionView: View {
                             Circle()
                                 .shadow(radius: 3)
                                 .frame(width: 24, height: 24)
-                                .foregroundColor(Color(uiColor: .systemBlue))
+                                .foregroundColor(Color("AppColor"))
                         } else {
                             Circle()
                                 .stroke()
