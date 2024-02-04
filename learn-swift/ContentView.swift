@@ -34,6 +34,16 @@ class QuizManager: ObservableObject {
     func canSubmitQuiz() -> Bool {
         return mockQuestions.filter({ $0.selection == nil }).isEmpty
     }
+    
+    func gradeQuiz() -> String {
+        var correct: CGFloat = 0
+        for question in mockQuestions {
+            if question.answer == question.selection {
+                correct += 1
+            }
+        }
+        return "\((correct/CGFloat(mockQuestions.count)) * 100)%"
+    }
 }
 
 struct ContentView: View {
@@ -49,7 +59,7 @@ struct ContentView: View {
                     
                     if let lastQuestion = manager.mockQuestions.last, lastQuestion.id == manager.mockQuestions[index].id {
                         Button {
-                                print("Submited")
+                            print(manager.gradeQuiz())
                         } label: {
                             Text("Submit")
                                 .padding()
@@ -60,6 +70,7 @@ struct ContentView: View {
                                         .frame(width: 340)
                                 )
                         }
+                        .buttonStyle(.plain)
                         .disabled(!manager.canSubmitQuiz())
                     }
                 }
