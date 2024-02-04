@@ -17,7 +17,8 @@ struct Question: Identifiable {
 
 
 struct QuestionView: View {
-    @State var question: Question
+    @Binding var question: Question
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(question.title)
@@ -66,16 +67,16 @@ struct QuestionView: View {
     }
 }
 
-struct QuestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            QuestionView(question: Question(
-                title: "When was the Iphone first released?",
-                answer: "A",
-                options: ["A", "B", "C","D"]
-            ))
-            .previewDevice("iPhone 12")
-            .previewInterfaceOrientation(.portrait)
-        }
-    }
-}
+//struct QuestionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            QuestionView(question: Question(
+//                title: "When was the Iphone first released?",
+//                answer: "A",
+//                options: ["A", "B", "C","D"]
+//            ))
+//            .previewDevice("iPhone 12")
+//            .previewInterfaceOrientation(.portrait)
+//        }
+//    }
+//}
