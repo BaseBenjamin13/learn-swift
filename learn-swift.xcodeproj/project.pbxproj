@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C699F80D2B71379900EBD4A8 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = C699F80C2B71379900EBD4A8 /* Algorithms */; };
 		C6B09EF02B66B6D800ED40E5 /* learn_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B09EEF2B66B6D800ED40E5 /* learn_swiftApp.swift */; };
 		C6B09EF22B66B6D800ED40E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B09EF12B66B6D800ED40E5 /* ContentView.swift */; };
 		C6B09EF42B66B6DB00ED40E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B09EF32B66B6DB00ED40E5 /* Assets.xcassets */; };
 		C6B09EF72B66B6DB00ED40E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B09EF62B66B6DB00ED40E5 /* Preview Assets.xcassets */; };
 		C6B09EFE2B696BA600ED40E5 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B09EFD2B696BA600ED40E5 /* QuestionView.swift */; };
+		C6FAF2D52B72A1A300E3B34C /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = C6FAF2D42B72A1A300E3B34C /* Auth */; };
+		C6FAF2D72B72A1A300E3B34C /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = C6FAF2D62B72A1A300E3B34C /* Functions */; };
+		C6FAF2D92B72A1A300E3B34C /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = C6FAF2D82B72A1A300E3B34C /* PostgREST */; };
+		C6FAF2DB2B72A1A300E3B34C /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = C6FAF2DA2B72A1A300E3B34C /* Realtime */; };
+		C6FAF2DD2B72A1A300E3B34C /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = C6FAF2DC2B72A1A300E3B34C /* Storage */; };
+		C6FAF2DF2B72A1A300E3B34C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = C6FAF2DE2B72A1A300E3B34C /* Supabase */; };
+		C6FAF2E12B72B12E00E3B34C /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FAF2E02B72B12E00E3B34C /* QuizManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +29,7 @@
 		C6B09EF32B66B6DB00ED40E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6B09EF62B66B6DB00ED40E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6B09EFD2B696BA600ED40E5 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		C6FAF2E02B72B12E00E3B34C /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +37,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FAF2DF2B72A1A300E3B34C /* Supabase in Frameworks */,
+				C6FAF2DD2B72A1A300E3B34C /* Storage in Frameworks */,
+				C6FAF2D92B72A1A300E3B34C /* PostgREST in Frameworks */,
+				C6FAF2D72B72A1A300E3B34C /* Functions in Frameworks */,
+				C6FAF2D52B72A1A300E3B34C /* Auth in Frameworks */,
+				C6FAF2DB2B72A1A300E3B34C /* Realtime in Frameworks */,
+				C699F80D2B71379900EBD4A8 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +71,7 @@
 			children = (
 				C6B09EEF2B66B6D800ED40E5 /* learn_swiftApp.swift */,
 				C6B09EF12B66B6D800ED40E5 /* ContentView.swift */,
+				C6FAF2E02B72B12E00E3B34C /* QuizManager.swift */,
 				C6B09EF32B66B6DB00ED40E5 /* Assets.xcassets */,
 				C6B09EF52B66B6DB00ED40E5 /* Preview Content */,
 				C6B09EFD2B696BA600ED40E5 /* QuestionView.swift */,
@@ -86,6 +103,15 @@
 			dependencies = (
 			);
 			name = "learn-swift";
+			packageProductDependencies = (
+				C699F80C2B71379900EBD4A8 /* Algorithms */,
+				C6FAF2D42B72A1A300E3B34C /* Auth */,
+				C6FAF2D62B72A1A300E3B34C /* Functions */,
+				C6FAF2D82B72A1A300E3B34C /* PostgREST */,
+				C6FAF2DA2B72A1A300E3B34C /* Realtime */,
+				C6FAF2DC2B72A1A300E3B34C /* Storage */,
+				C6FAF2DE2B72A1A300E3B34C /* Supabase */,
+			);
 			productName = "learn-swift";
 			productReference = C6B09EEC2B66B6D800ED40E5 /* learn-swift.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +140,10 @@
 				Base,
 			);
 			mainGroup = C6B09EE32B66B6D800ED40E5;
+			packageReferences = (
+				C699F80B2B71379900EBD4A8 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = C6B09EED2B66B6D800ED40E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FAF2E12B72B12E00E3B34C /* QuizManager.swift in Sources */,
 				C6B09EF22B66B6D800ED40E5 /* ContentView.swift in Sources */,
 				C6B09EFE2B696BA600ED40E5 /* QuestionView.swift in Sources */,
 				C6B09EF02B66B6D800ED40E5 /* learn_swiftApp.swift in Sources */,
@@ -343,6 +374,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C699F80B2B71379900EBD4A8 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C699F80C2B71379900EBD4A8 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C699F80B2B71379900EBD4A8 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		C6FAF2D42B72A1A300E3B34C /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		C6FAF2D62B72A1A300E3B34C /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		C6FAF2D82B72A1A300E3B34C /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		C6FAF2DA2B72A1A300E3B34C /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		C6FAF2DC2B72A1A300E3B34C /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		C6FAF2DE2B72A1A300E3B34C /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6FAF2D32B72A1A300E3B34C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6B09EE42B66B6D800ED40E5 /* Project object */;
 }
